@@ -11,7 +11,7 @@ def get_db_connection():
     mydb = con.connect(
         host="localhost",
         user="root",
-        password="Hyper",
+        password="root",
         database="crime"
     )
     return mydb
