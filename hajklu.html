@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Mapping System</title>
+    <link rel="stylesheet" href="hackjklu.css"> <!-- Make sure this CSS file exists -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="crime-map.html">Crime Map</a></li>
+            <li><a href="report-crime.html">Report a Crime</a></li>
+            <li><a href="crime-alerts.html">Crime Alerts</a></li>
+           
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Heading -->
+    <header>
+        <h1>Crime Mapping & Safety System</h1>
+    </header>
+
+    <!-- Search Box -->
+    <div class="search-container">
+        <input type="text" id="locationInput" placeholder="Enter location">
+        <button onclick="checkCrimeReport()">Check Crime Report</button>
+    </div>
+
+    <!-- Crime Map -->
+    <div class="map-container">
+        <img src="https://www.caliper.com/maptitude/crime/maptitude-crime-mapping-software-hot-spot.jpg" alt="Crime Map">
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="hackjklu.js"></script>
+
+</body>
+</html>

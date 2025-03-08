@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Crime Mapping System</title>
+
+    <!-- Embedded CSS for Styling -->
+    <style>
+        /* ============================= */
+        /* ✅ Reset Styles */
+        /* ============================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ============================= */
+        /* ✅ Navigation Bar */
+        /* ============================= */
+        nav {
+            background-color: #000982;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: #000982;
+            border-radius: 5px;
+        }
+
+        /* ============================= */
+        /* ✅ Website Heading */
+        /* ============================= */
+        header {
+            background-color: #4B0082;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        /* ============================= */
+        /* ✅ Home Page Content */
+        /* ============================= */
+        .home-content {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .home-content h2 {
+            color: #031240;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .home-content ul {
+            list-style-type: none;
+            max-width: 500px;
+            margin: 15px auto;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .home-content ul li {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 10px;
+            background: #fff;
+            border-left: 5px solid #4B0082;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* ============================= */
+        /* ✅ Quick Links */
+        /* ============================= */
+        .quick-links {
+            margin-top: 20px;
+        }
+
+        .quick-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #000982;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .quick-links a:hover {
+            background-color: red;
+        }
+
+        /* ============================= */
+        /* ✅ Safety Tips */
+        /* ============================= */
+        .tips-container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: left;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tip {
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #4B0082;
+            border-radius: 5px;
+        }
+
+        .tip h3 {
+            color: #4B0082;
+        }
+
+        /* ============================= */
+        /* ✅ Footer */
+        /* ============================= */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #4B0082;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="crime-map.html">Crime Map</a></li>
+            <li><a href="report-crime.html">Report a Crime</a></li>
+            <li><a href="crime-alerts.html">Crime Alerts</a></li>
+          
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Heading -->
+    <header>
+        <h1>Crime Mapping & Safety System</h1>
+        <p>Track crime hotspots, stay informed, and stay safe.</p>
+    </header>
+
+    <!-- Home Page Content -->
+    <section class="home-content">
+        <h2>About This System</h2>
+        <p>This system helps visualize crime data and provides real-time safety alerts.</p>
+
+        <h2>Latest Crime Statistics</h2>
+        <ul>
+            <li><strong>Delhi:</strong> 150 incidents reported last month</li>
+            <li><strong>Mumbai:</strong> 85 incidents reported</li>
+            <li><strong>Bangalore:</strong> 40 incidents reported</li>
+            <li><strong>Kolkata:</strong> 70 incidents reported</li>
+        </ul>
+
+        <h2>Quick Links</h2>
+        <div class="quick-links">
+            <a href="crime-map.html">View Crime Map</a>
+            <a href="report-crime.html">Report a Crime</a>
+        </div>
+    </section>
+
+    <!-- Safety Tips Section -->
+    <section class="tips-container">
+        <h2>Safety Tips</h2>
+
+        <div class="tip">
+            <h3>1. Stay Aware of Your Surroundings</h3>
+            <p>Always be alert when walking in public places. Avoid distractions like mobile phones in unfamiliar areas.</p>
+        </div>
+
+        <div class="tip">
+            <h3>2. Lock Your Doors and Windows</h3>
+            <p>Ensure your home and vehicle are properly locked at all times to prevent unauthorized access.</p>
+        </div>
+
+        <div class="tip">
+            <h3>3. Travel in Groups</h3>
+            <p>Avoid walking alone at night. If possible, stay in well-lit areas and travel with friends or family.</p>
+        </div>
+
+        <div class="tip">
+            <h3>4. Do Not Share Personal Information</h3>
+            <p>Be cautious when sharing your location or personal details on social media or with strangers.</p>
+        </div>
+
+        <div class="tip">
+            <h3>5. Learn Self-Defense</h3>
+            <p>Basic self-defense skills can help you in emergencies. Consider taking a self-defense class.</p>
+        </div>
+
+        <div class="tip">
+            <h3>6. Report Suspicious Activities</h3>
+            <p>If you see something suspicious, report it to the authorities immediately.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Crime Mapping System | All Rights Reserved
+    </footer>
+
+</body>
+</html>

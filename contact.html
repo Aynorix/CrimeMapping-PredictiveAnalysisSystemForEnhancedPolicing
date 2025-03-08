@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Crime Mapping System</title>
+
+    <!-- Embedded CSS for Styling -->
+    <style>
+        /* ============================= */
+        /* ✅ Reset Styles */
+        /* ============================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ============================= */
+        /* ✅ Navigation Bar */
+        /* ============================= */
+        nav {
+            background-color: #000982;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: #000982;
+            border-radius: 5px;
+        }
+
+        /* ============================= */
+        /* ✅ Contact Form */
+        /* ============================= */
+        .contact-container {
+            width: 60%;
+            margin: 20px auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #4B0082;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            align-self: flex-start;
+            font-size: 16px;
+            color: #4B0082;
+        }
+
+        input, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #4B0082;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Textarea */
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        /* Placeholder Styling */
+        input::placeholder, textarea::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Submit Button */
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #3A006E;
+        }
+
+        /* ============================= */
+        /* ✅ Footer */
+        /* ============================= */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #4B0082;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="crime-map.html">Crime Map</a></li>
+            <li><a href="report-crime.html">Report a Crime</a></li>
+            <li><a href="crime-alerts.html">Crime Alerts</a></li>
+           
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Form -->
+    <section class="contact-container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" placeholder="Enter your email address" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" placeholder="Type your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Crime Mapping System | All Rights Reserved
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents page refresh
+            
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            if (!name || !email || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            alert("✅ Your message has been sent successfully!");
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Crime | Crime Mapping System</title>
+
+    <!-- Embedded CSS for Styling -->
+    <style>
+        /* ============================= */
+        /* ✅ Reset Styles */
+        /* ============================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ============================= */
+        /* ✅ Navigation Bar */
+        /* ============================= */
+        nav {
+            background-color: #000982;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: #000982;
+            border-radius: 5px;
+        }
+
+        /* ============================= */
+        /* ✅ Report Crime Form */
+        /* ============================= */
+        .form-container {
+            width: 60%;
+            margin: 20px auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #4B0082;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            align-self: flex-start;
+            font-size: 16px;
+            color: #4B0082; /* Label color for better visibility */
+        }
+
+        input, select, textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #4B0082;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Adjust Select Dropdown */
+        select {
+            cursor: pointer;
+            background-color: #f1f1f1;
+        }
+
+        /* Textarea */
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        /* Placeholder Styling */
+        input::placeholder, textarea::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Submit Button */
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #3A006E;
+        }
+
+        /* ============================= */
+        /* ✅ Footer */
+        /* ============================= */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #4B0082;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="crime-map.html">Crime Map</a></li>
+            <li><a href="report-crime.html">Report a Crime</a></li>
+            <li><a href="crime-alerts.html">Crime Alerts</a></li>
+          
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Report a Crime Form -->
+    <section class="form-container">
+        <h2>Report a Crime</h2>
+        <form id="crimeReportForm">
+            <label for="crime-type">Select Crime Type:</label>
+            <select id="crime-type" required>
+                <option value="" disabled selected>-- Select Crime Type --</option>
+                <option value="Theft">Theft</option>
+                <option value="Assault">Assault</option>
+                <option value="Burglary">Burglary</option>
+                <option value="Kidnapping">Kidnapping</option>
+                <option value="Homicide">Homicide</option>
+                <option value="Domestic Violence">Domestic Violence</option>
+                <option value="Cyber Crime">Cyber Crime</option>
+                <option value="Fraud">Fraud</option>
+                <option value="Vandalism">Vandalism</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="crime-location">Location of Crime:</label>
+            <input type="text" id="crime-location" placeholder="Enter city, street, or landmark" required>
+
+            <label for="crime-date">Date of Crime:</label>
+            <input type="date" id="crime-date" required>
+
+            <label for="crime-time">Time of Crime:</label>
+            <input type="time" id="crime-time" required>
+
+            <label for="witness">Any Witnesses?</label>
+            <select id="witness" required>
+                <option value="" disabled selected>-- Select --</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="crime-description">Description of the Incident:</label>
+            <textarea id="crime-description" placeholder="Provide details of what happened" required></textarea>
+
+            <label for="evidence">Upload Evidence (Image/Video):</label>
+            <input type="file" id="evidence" accept="image/*,video/*">
+
+            <button type="submit">Submit Report</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Crime Mapping System | All Rights Reserved
+    </footer>
+
+    <script>
+        document.getElementById("crimeReportForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents page refresh
+
+            let crimeType = document.getElementById("crime-type").value;
+            let location = document.getElementById("crime-location").value;
+            let date = document.getElementById("crime-date").value;
+            let time = document.getElementById("crime-time").value;
+            let witness = document.getElementById("witness").value;
+            let description = document.getElementById("crime-description").value;
+
+            if (!crimeType || !location || !date || !time || !witness || !description) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            alert("✅ Crime report submitted successfully!");
+            document.getElementById("crimeReportForm").reset();
+        });
+    </script>
+
+</body>
+</html>
+
